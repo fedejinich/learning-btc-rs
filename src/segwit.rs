@@ -185,7 +185,7 @@ mod test_segwit {
         let mut w = Witness::new();
         // Add an extra "" for the CheckMultiSig bug
         // https://learn.saylor.org/mod/book/view.php?id=36369&chapterid=18956
-        w.push(hex_decode("")); //
+        w.push(hex_decode(""));
         w.push_ecdsa_signature(&to_sig(signature_1)); // push 1 of 2 signatures
         w.push_ecdsa_signature(&to_sig(signature_2)); // push 2 of 2 signatures
         w.push(p2wsh_witness_script.clone()); // push witness_script
